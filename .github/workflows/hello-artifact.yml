@@ -28,5 +28,5 @@ jobs:
       - name: upload system info artifact
         uses: actions/upload-artifact@v4
         with:
-          name: system-info
+          name: result.zip
           path: system-info.md
