@@ -1,0 +1,27 @@
+name: Hello runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  runner-job-definition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show runner info
+        run: |
+          echo "=== CPU Info ==="
+          lscpu
+          echo
+          echo "=== Memory Info ==="
+          free -h
+          echo
+          echo "=== Current Directory ==="
+          pwd
+          echo
+          echo "=== Directory Contents ==="
+          ls -al
